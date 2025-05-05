@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Apple Info</title>
@@ -11,32 +12,24 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
   <!-- Link to external CSS -->
-  <link rel="stylesheet" href="./styleShop.css">
+  <link rel="stylesheet" href="./css/About.css">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
-  <!-- FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
 
   <!-- Popper and Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
 
   <!-- Three.js and loaders -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js"></script>
@@ -46,20 +39,21 @@
   <script src="js/bootstrap.js"></script>
 
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-  
+
       <!-- Logo on the far left -->
       <a class="navbar-brand" href="./Shop.html">
         <img src="assets/images/dsdsdsd.png" alt="Logo" style="height: 100px;">
       </a>
-  
+
 
       <!-- Spacer to push About and Cart to the right -->
       <div class="flex-grow-1"></div>
-  
+
       <!-- About and Cart on the far right -->
       <div class="navbar-nav d-flex flex-row align-items-center">
         <a class="nav-link px-3" href="./About.html">About</a>
@@ -67,13 +61,243 @@
           <img src="assets/images/dsdsdsd(2).png" alt="cart" style="height: 100px;">
         </a>
       </div>
-  
+
     </div>
   </nav>
-  <a style="text-align: center; margin-top: 40vh; color: red; font-size: 60px;">UNDER CONSTRUCTION</a>
+
+  <!-- <a style="text-align: center; margin-top: 40vh; color: red; font-size: 60px;">UNDER CONSTRUCTION</a> -->
+  <div class="container-fluid py-5">
+    <h1 style="color:#02364e; font-weight: bold;">3D Models</h1>
+    <div class="row">
+      <!-- Left Side: Text Content -->
+      <div class="col-md-8">
+
+        <h2 style="color:#156082;font-weight: bold;">Geometry</h2>
+        <p class="text">For this website I created 3 3D models of a carrot, apple and pepper. For each item I created
+          two blender files, one with an animation attached and one with no animation. The models were created with a
+          low poly count so that the load time for each model was minimal for the user. </a>
+        <h2 style="color:#156082;font-weight: bold;">Lighting</h2>
+        <p class="text">4 directional lights were created when loading the model with Three.js as well as an ambient
+          light to smooth the shadows on the models. These lights were configured with their position as well as
+          intensity in the Three.js editor before being introduced into the website.</p>
+        <h2 style="color:#156082;font-weight: bold;">Cameras</h2>
+        <p class="text">A perspective camera was created, with the aspect ratio determined by the container that held
+          the model. Orbit controls were added to allow the user to view the models at any angle. </p>
+        <h2 style="color:#156082;font-weight: bold;">Textures</h2>
+        <p class="text">For the carrot and apple models there were two textures created, one was a simplistic base
+          colour texture for the animation model with a realistic texture applied to the second model that is shown
+          later to the user. Due to the limitations of the GLTF format, detailed colour mixes and gradients were not
+          possible to export reducifont-weight: bold;ng the complexity available to the models. For all the models the stems were coloured
+          with a separate texture to the rest of the model. Finally, the pepper model in the Store page rotates between
+          red, green and yellow so allow the user to see each colour pepper available.</p>
+        <h2 style="color:#156082;font-weight: bold;">Animations</h2>
+        <p class="text">Again, due to the limitations of GLTF certain blender animation tools, such as animating with
+          gravity or quick effects, could not be exported and viewed. To achieve the desired animations, I was required
+          to manually place the objects where I wanted them to end up in each key frame.</p>
+        <p class="text">In the apple animation there are two apples’ models, one that is not ‘sliced’ and the other
+          which has been ‘sliced’. To transition between the two models, I shrunk and enlarged each model between 1
+          frame to provide the illusion that the apple had been cut. I used this method again for the apple slicer to
+          appear and disappear. To create the sliced apple, I created asterisk that is the length and width of the
+          apple, then I used the Boolean modifier on the apple to remove the parts that the asterisk and the apple
+          overlapped to create a ‘sliced’ apple. I then used the asterisk to create the slicer that falls when the
+          animation is played. Finally, I manually positioned the different sections of the apple, after separating each
+          section from the original model, to where I wanted them to fall after being sliced.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="row g-3">
+          <div class="col-6">
+            <img src="./assets/images/Carrot_simple.png" alt="Simple Carrot" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/carrot_real.png" alt="Real Carrot" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/apple_simple.png" alt="Simple Apple" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/apple_real.png" alt="Real Apple" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/Pepper_simple.png" alt="Simple Pepper" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/apple_boolean.png" alt="Sliced Apple" class="img-fluid pop-image" />
+          </div>
+          <div class="col-6">
+            <img src="./assets/images/apple_asterisk.png" alt="Sliced Apple" class="img-fluid pop-image" />
+          </div>
+        </div>
+      </div>
+      <h1 style="color:#02364e;font-weight: bold;">Design</h1>
+      <h2 style="color:#156082;font-weight: bold;">Usability and Accessibility</h2>
+      <p class="text">Buttons to interact with the website were designed to allow users with difficulties or mobile
+        users to easily interact with the website. Moving between each page relies on the common practices of all online
+        stores with a shopping cart signifying how to get to the page showing the items you have selected. Alt text on
+        all sections is included as well as a high contrast between elements to help identification of different
+        sections and buttons.</p>
+      <h2 style="color:#156082;font-weight: bold;">Responsive and Look and Feel</h2>
+      <p class="text">All pages utilised bootstrap to allow re-sizing to any screen or window size. The website has a
+        consistent colour theme with all the buttons (other than empty basket) matching the website icon. The section
+        the user is on is highlighted in the nav bar. When a user adds an item into their cart a number is shown, and
+        this carries over and updates unless the user decides to empty their basket.</p>
+
+      <h1 style="color:#02364e;font-weight: bold;">Integration</h1>
+      <p class="text">To integrate my models, I used Three.js GLTFLoader which loaded the model as well as the
+        animation. I also used Three.js AudioListener to load the sounds that I created using Adobe Audition. To match
+        the audio and video in Adobe Audition I rendered each animation and exported it. This allowed me to cut the
+        audio to sync to the timing of my animations. This required trimming and merging the audio files so that the
+        sound occurred at the right time as well as speeding up some sounds to match the speed of the animations. I
+        created a icon for the website which using favicon.io I used the website identifier. A shopping cart icon was
+        also created to link the two pages together.</p>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <!-- Left Side: Text Content -->
+          <div class="col-md-8 px-4">
+            <h1 style="color:#02364e;font-weight: bold;">Interaction</h1>
+            <h2 style="color:#156082;font-weight: bold;">Manipulation and viewing of 3D models</h2>
+            <p class="text">As stated, before I used orbit controls to allow the user to view the models from all sides
+              as well as a wireframe button to view each model’s wireframe. When the user presses the + to add the item
+              to the cart the animation and sound are played before hiding the model. When a model is added to the cart
+              a counter is increased in the localStorage. This is used in the Store page and the cart counter to
+              determine the amount and what has been selected. The models are all loaded when the user chooses which
+              item they want to view and are all hidden when they are not selected. A swap item button is added to allow
+              the user to switch between each item when they have selected a model. The wireframe and swap model buttons
+              are hidden when an object is not selected, and all buttons are greyed out when the + is pressed so to not
+              have overlapping models.</p>
+            <h2 style="color:#156082;font-weight: bold;">Interactivities in all the other pages</h2>
+            <p class="text">In the Store page the models that have been selected are shown here and can be clicked on to
+              show the price comparison. This changes the colour of the background for the model to show the viewer
+              which one is currently selected. This changes when another item is selected. The amount the user has
+              selected an item affects the price comparison with the total price for the number selected is shown as
+              well as the price for a single item. I used grid display to place all the containers on all pages
+              correctly as well as placing each container next to each other when they are loaded on the store page.
+              Hover effects are included on all interactable as well as the unavailable elements being greyed out and
+              unavailable to be interacted with. A search feature is included in the shop page to allow the user to find
+              a specific item with the use of this feature increasing with more items being available.</p>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-7">
+                  <img src="./assets/images/sounds.png" alt="audio for objects" class="img-fluid pop-image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 px-4">
+            <div class="row g-3">
+              <div class="col-6">
+                <img src="./assets/images/carrots_flying.png" alt="Carrot flying" class="img-fluid pop-image" />
+              </div>
+              <div class="col-6">
+                <img src="./assets/images/pepper_falling.png" alt="peppers falling" class="img-fluid pop-image" />
+              </div>
+              <div class="col-6">
+                <img src="./assets/images/apple_slicing.png" alt="Apple slicing" class="img-fluid pop-image" />
+              </div>
+              <div class="col-6">
+                <img src="./assets/images/apple_sliced.png" alt="Apple sliced" class="img-fluid pop-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4"></div>
+      <h1 style="color:#02364e;font-weight: bold;">Implementation</h1>
+      <h2 style="color:#156082;font-weight: bold;">Testing</h2>
+      <p class="text">I performed functional testing to make sure that the page works as intended on multiple
+        applications (Firefox, google chrome, edge, etc) as well as testing the product on mobile devices. I have
+        conducted an anonymous survey which includes questions on the functionality of the website as well as the design
+        and interaction. </p>
+      <h2 style="color:#156082;font-weight: bold;">Outcomes</h2>
+      <p class="text">The functional testing concluded that all browsers work as intended with the website however,
+        testing on mobile devices showed that the selection of the item in the Store page was unavailable with a
+        touchscreen press. This outcome was unexpected as the ‘click’ event listener was used to check when a container
+        was clicked. This is the same event listener used with the buttons which worked with a touch screen.</p>
+      <p class="text">The survey results showed a high amount of positive feedback for the UI, navigation and
+        interactivities of the website with quotes: ‘I like the animation, it was fun to play around with’ and ‘I found
+        it easy to navigate and I enjoyed the price comparison aspect’. An improvement that was suggested included more
+        items, ability to swap directly to a model they wanted to rather than clicking the swap model button and the
+        ability to view the list of chosen fruit in the basket. One of the responders stated that the website ‘feels a
+        little too minimal’.</p>
+      <h2 style="color:#156082; font-weight: bold;">Evidence Of Testing</h2>
+      <div class="text test-results">
+        <div class="respondent">
+            <h3>Respondent 1</h3>
+            <div class="question">Q1: How did you find interacting with the web application?</div>
+            <div class="response">
+                <span class="bullet">•</span> Positives: "Good interactivity, intuitive UI for the most part. Great site! Love the animations, especially the apple cutting."<br>
+                <span class="bullet">•</span> Improvement: "I found it slightly annoying that you could not select a different item after having already selected one. E.g., after selecting pepper, I had to press 'swap model' to see carrots and couldn’t just click on carrots."
+            </div>
+            <div class="question">Q2: Visual design and layout rating:</div>
+            <div class="response"><span class="bullet">•</span> Good</div>
+            <div class="question">Q3: Further information:</div>
+            <div class="response"><span class="bullet">•</span> "UI is clear and simple to navigate. Feels a little too minimal perhaps."</div>
+            <div class="question">Q4: Likelihood to revisit:</div>
+            <div class="response"><span class="bullet">•</span> Slightly likely</div>
+            <div class="question">Q5: Likelihood to refer to others:</div>
+            <div class="response"><span class="bullet">•</span> Slightly likely</div>
+            <div class="question">Q6: Additional feedback:</div>
+            <div class="response"><span class="bullet">•</span> No feedback provided.</div>
+        </div>
+    
+        <hr class="respondent-divider">
+    
+        <div class="respondent">
+            <h3>Respondent 2</h3>
+            <div class="question">Q1: How did you find interacting with the web application?</div>
+            <div class="response">
+                <span class="bullet">•</span> Positives: "I like the animation; it was fun to play around with. No issues with sending stuff to the basket."
+            </div>
+            <div class="question">Q2: Visual design and layout rating:</div>
+            <div class="response"><span class="bullet">•</span> Excellent</div>
+            <div class="question">Q3: Further information:</div>
+            <div class="response"><span class="bullet">•</span> "3D models were identifiable, and the framerate of the animation was high, so it all looked well made."</div>
+            <div class="question">Q4: Likelihood to revisit:</div>
+            <div class="response"><span class="bullet">•</span> Slightly unlikely</div>
+            <div class="question">Q5: Likelihood to refer to others:</div>
+            <div class="response"><span class="bullet">•</span> Slightly likely</div>
+            <div class="question">Q6: Additional feedback:</div>
+            <div class="response"><span class="bullet">•</span> "I would like more fruits and the ability to see the list of chosen fruit in the basket."</div>
+        </div>
+    
+        <hr class="respondent-divider">
+    
+        <div class="respondent">
+            <h3>Respondent 3</h3>
+            <div class="question">Q1: How did you find interacting with the web application?</div>
+            <div class="response">
+                <span class="bullet">•</span> Positives: "I found it easy to navigate, and I enjoyed the price comparison aspect. I also found the animations engaging and impressive!"
+            </div>
+            <div class="question">Q2: Visual design and layout rating:</div>
+            <div class="response"><span class="bullet">•</span> Good</div>
+            <div class="question">Q3: Further information:</div>
+            <div class="response"><span class="bullet">•</span> "I found it clear, but some things seemed unavailable, like removing objects from the basket, for example."</div>
+            <div class="question">Q4: Likelihood to revisit:</div>
+            <div class="response"><span class="bullet">•</span> Extremely likely</div>
+            <div class="question">Q5: Likelihood to refer to others:</div>
+            <div class="response"><span class="bullet">•</span> Extremely likely</div>
+            <div class="question">Q6: Additional feedback:</div>
+            <div class="response"><span class="bullet">•</span> "I would like more products!! I like the search bar; it would be very useful if you had a long list of products."</div>
+        </div>
+    </div>
+
+      <h1 style="color:#02364e;font-weight: bold;">Deeper understanding</h1>
+      <p class="text">I used GitHub to store my project to avoid potential loss of data. I have also used favicon to add
+        a website icon to improve visibility when looking for the website tab. </p>
+
+      <h1 style="color:#02364e;font-weight: bold;">Implementation & publication</h1>
+      <p class="text">I have added an about page. I have uploaded all contents to a GitHub repository including the
+        blender files that were exported to create the GLTF files. I have uploaded my project to my public_html folder
+        which was used for testing, and I have tested that my folder can be opened in Visual Studio Code when unzipped.
+      </p>
+    </div>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="./js/About.js"></script>
+  <div id="popup" class="image-popup">
+    <img id="popup-img" src="#" alt="Popup Image">
+  </div>
 </body>
+
 </html>
