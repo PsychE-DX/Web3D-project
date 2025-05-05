@@ -1,0 +1,133 @@
+.image-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-popup.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-popup img {
+    width: auto;
+    height: auto;
+    max-width: 40%;
+    max-height: 40%;
+    transform: scale(2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#cart-count {
+    font-size: 1rem;
+    padding: 4px 8px;
+}
+
+/* Style only the text links in the navbar (not images) */
+.navbar .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+    text-transform: uppercase;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Active/current link style (optional) */
+.navbar .nav-link.active {
+    color: #007bff;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+}
+
+.navbar-brand.active {
+    outline: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #e6f0ff;
+    transition: background-color 0.3s, outline 0.3s;
+}
+
+body {
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 510;
+    background-color: rgb(221, 221, 221);
+    border-radius: 8px;
+}
+
+.test-results {
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.respondent h3 {
+    color: #02364e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question {
+    color: #156082;
+    font-weight: 600;
+    margin: 15px 0 5px;
+}
+
+.response {
+    margin-left: 25px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.bullet {
+    position: absolute;
+    left: -15px;
+    color: #156082;
+    font-weight: bold;
+}
+
+.respondent-divider {
+    border: 0;
+    height: 1px;
+    background: #02364e;
+    margin: 30px 0;
+    opacity: 0.3;
+}
